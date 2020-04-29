@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/xiaoyao316/blog/issues"
   },
-  "homepage": "https://github.com/xiaoyao316/blog#readme"
+  "homepage": "https://github.com/xiaoyao316/blog#readme",
+  "dependencies": {
+    "vuepress": "^1.4.1"
+  }
 }

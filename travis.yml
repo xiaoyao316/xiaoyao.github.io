@@ -9,5 +9,5 @@ deploy:
   github_token: 5d5b68068bbf89b5a21f8075dc7827c4f14cf847
   keep_history: true
   on:
-    branch: dev
+    branch: master
   local_dir: dist
