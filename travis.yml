@@ -1,0 +1,13 @@
+language: node_js
+node_js: 12
+script: npm run build
+notifications:
+  email: true
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: 5d5b68068bbf89b5a21f8075dc7827c4f14cf847
+  keep_history: true
+  on:
+    branch: dev
+  local_dir: dist
