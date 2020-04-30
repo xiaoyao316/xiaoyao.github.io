@@ -17,7 +17,6 @@ let nods = function (dir) {
                     if (st.isFile()) {
                         fs.unlink(src, (err) => {
                             if (err) throw err;
-                            console.log('成功删除' + src);
                         });
                     } else {
                         // 递归作为文件夹处理
