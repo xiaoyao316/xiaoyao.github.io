@@ -7,22 +7,60 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '主页', link: '/' },
-            { text: '关于', link: '/about/' },
             { text: 'Github', link: 'https://github.com/xiaoyao316' },
         ],
         sidebar: [
             {
-                title: 'Javascript',// 必要的
-                path: '/js/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                collapsable: false, // 可选的, 默认值是 true,
+                title: 'JavaScript',// 必要的
+                path: '/js/',       // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                collapsable: true,  // 可选的, 默认值是 true,
                 sidebarDepth: 1,    // 可选的, 默认值是 1
+                children: []
+            },
+            {
+                title: '设计模式',
+                path: '/designMode/',
+                collapsable: true,
+                sidebarDepth: 1,
                 children: [
-                    '/js/proto',
-                    '/js/eventloop'
+                    '/designMode/singleton',
+                    '/designMode/strategy',
+                    '/designMode/proxy',
+                    '/designMode/iterator',
+                    '/designMode/observer',
+                    '/designMode/command',
+                    '/designMode/composite',
+                    '/designMode/template',
+                    '/designMode/flyweight',
+                    '/designMode/chainOfResponsibility',
+                    '/designMode/mediator',
+                    '/designMode/decorator',
+                    '/designMode/state',
+                    '/designMode/adapter'
                 ]
+            },
+            {
+                title: '浏览器',
+                path: '/browser/',
+                collapsable: true,
+                sidebarDepth: 1,
+                children: [
+                    '/browser/loadpage'
+                ]
+            },
+            {
+                title: '前端优化',
+                path: '/optimize/',
+                collapsable: true,
+                sidebarDepth: 1,
+                children: []
             },
         ],
         sidebarDepth: 2,
         lastUpdated: 'Last Updated',
-    }
+    },
+    plugins: [
+        '@vuepress/active-header-links',
+        '@vuepress/back-to-top'
+    ]
 }

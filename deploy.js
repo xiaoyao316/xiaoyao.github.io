@@ -5,7 +5,7 @@ const path = require('path');
  * 删除根目录下旧文件
  * @param  String dir 文件夹名称
  */
-let protected_folders = ['.git', '.idea', 'docs', '.gitignore', 'deploy.js', 'LICENSE', 'package.json', 'README.md']
+let protected_folders = ['.git', '.idea', 'docs', 'node_modules', '.gitignore', 'deploy.js', 'LICENSE', 'package.json', 'README.md']
 let nods = function (dir) {
     fs.readdir(dir, function(err, files) {
         files.forEach(function(filename) {
