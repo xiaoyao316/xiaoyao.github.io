@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>观察者模式 | 前端大户</title>
+    <title>发布订阅模式 | 前端大户</title>
     <meta name="generator" content="VuePress 1.4.1">
     <link rel="icon" href="/img/favicon.ico">
     <meta name="description" content="前端大户个人博客">
-    <link rel="preload" href="/assets/css/0.styles.4971703f.css" as="style"><link rel="preload" href="/assets/js/app.dee2d364.js" as="script"><link rel="preload" href="/assets/js/2.b9fd0d4b.js" as="script"><link rel="preload" href="/assets/js/17.6406ab02.js" as="script"><link rel="prefetch" href="/assets/js/10.47ac3a8e.js"><link rel="prefetch" href="/assets/js/11.a07eb3d7.js"><link rel="prefetch" href="/assets/js/12.6036cf33.js"><link rel="prefetch" href="/assets/js/13.bff91fcd.js"><link rel="prefetch" href="/assets/js/14.c14d45e2.js"><link rel="prefetch" href="/assets/js/15.b838b167.js"><link rel="prefetch" href="/assets/js/16.6e5c33bd.js"><link rel="prefetch" href="/assets/js/18.ce9da1e0.js"><link rel="prefetch" href="/assets/js/19.d7cfe149.js"><link rel="prefetch" href="/assets/js/20.0d75e31c.js"><link rel="prefetch" href="/assets/js/21.5190d829.js"><link rel="prefetch" href="/assets/js/22.627f3ed2.js"><link rel="prefetch" href="/assets/js/23.641cf850.js"><link rel="prefetch" href="/assets/js/24.14f3c82a.js"><link rel="prefetch" href="/assets/js/25.1ecec336.js"><link rel="prefetch" href="/assets/js/26.825c8f1f.js"><link rel="prefetch" href="/assets/js/27.0d75a127.js"><link rel="prefetch" href="/assets/js/3.bd3e8b7e.js"><link rel="prefetch" href="/assets/js/4.a4c69038.js"><link rel="prefetch" href="/assets/js/5.ed0befef.js"><link rel="prefetch" href="/assets/js/6.9cd27e56.js"><link rel="prefetch" href="/assets/js/7.88053aa1.js"><link rel="prefetch" href="/assets/js/8.4017588b.js"><link rel="prefetch" href="/assets/js/9.6a985614.js">
+    <link rel="preload" href="/assets/css/0.styles.4971703f.css" as="style"><link rel="preload" href="/assets/js/app.fb8c9b32.js" as="script"><link rel="preload" href="/assets/js/2.b9fd0d4b.js" as="script"><link rel="preload" href="/assets/js/17.3850c604.js" as="script"><link rel="prefetch" href="/assets/js/10.b25d5995.js"><link rel="prefetch" href="/assets/js/11.34d3cd53.js"><link rel="prefetch" href="/assets/js/12.298ce7ff.js"><link rel="prefetch" href="/assets/js/13.24a85f5a.js"><link rel="prefetch" href="/assets/js/14.cb366903.js"><link rel="prefetch" href="/assets/js/15.f7e3e6c6.js"><link rel="prefetch" href="/assets/js/16.78eb40ad.js"><link rel="prefetch" href="/assets/js/18.ad23a43d.js"><link rel="prefetch" href="/assets/js/19.67db0226.js"><link rel="prefetch" href="/assets/js/20.e6d626bc.js"><link rel="prefetch" href="/assets/js/21.f3743356.js"><link rel="prefetch" href="/assets/js/22.6662488e.js"><link rel="prefetch" href="/assets/js/23.641cf850.js"><link rel="prefetch" href="/assets/js/24.14f3c82a.js"><link rel="prefetch" href="/assets/js/25.1ecec336.js"><link rel="prefetch" href="/assets/js/26.825c8f1f.js"><link rel="prefetch" href="/assets/js/27.0d75a127.js"><link rel="prefetch" href="/assets/js/3.bd3e8b7e.js"><link rel="prefetch" href="/assets/js/4.a4c69038.js"><link rel="prefetch" href="/assets/js/5.fccaee9d.js"><link rel="prefetch" href="/assets/js/6.6f6afc50.js"><link rel="prefetch" href="/assets/js/7.88053aa1.js"><link rel="prefetch" href="/assets/js/8.ab51d515.js"><link rel="prefetch" href="/assets/js/9.61406a2c.js">
     <link rel="stylesheet" href="/assets/css/0.styles.4971703f.css">
   </head>
   <body>
@@ -19,7 +19,165 @@
   主页
 </a></div><div class="nav-item"><a href="https://github.com/xiaoyao316" target="_blank" rel="noopener noreferrer" class="nav-link external">
   Github
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/" class="sidebar-link">JavaScript</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/designMode/" class="sidebar-heading clickable router-link-active open"><span>设计模式</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/designMode/singleton.html" class="sidebar-link">单例模式</a></li><li><a href="/designMode/strategy.html" class="sidebar-link">策略模式</a></li><li><a href="/designMode/proxy.html" class="sidebar-link">代理模式</a></li><li><a href="/designMode/iterator.html" class="sidebar-link">迭代器模式</a></li><li><a href="/designMode/observer.html" class="active sidebar-link">观察者模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/designMode/observer.html#观察者模式" class="sidebar-link">观察者模式</a></li></ul></li><li><a href="/designMode/command.html" class="sidebar-link">命令模式</a></li><li><a href="/designMode/composite.html" class="sidebar-link">组合模式</a></li><li><a href="/designMode/template.html" class="sidebar-link">模板方法模式</a></li><li><a href="/designMode/flyweight.html" class="sidebar-link">享元模式</a></li><li><a href="/designMode/chainOfResponsibility.html" class="sidebar-link">职责链模式</a></li><li><a href="/designMode/mediator.html" class="sidebar-link">中介者模式</a></li><li><a href="/designMode/decorator.html" class="sidebar-link">装饰器模式</a></li><li><a href="/designMode/state.html" class="sidebar-link">状态模式</a></li><li><a href="/designMode/adapter.html" class="sidebar-link">适配器模式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/browser/" class="sidebar-heading clickable"><span>浏览器</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/optimize/" class="sidebar-link">前端优化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="观察者模式"><a href="#观察者模式" class="header-anchor">#</a> 观察者模式</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/2/2020, 5:16:10 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/" class="sidebar-link">JavaScript</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/designMode/" class="sidebar-heading clickable router-link-active open"><span>设计模式</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/designMode/singleton.html" class="sidebar-link">单例模式</a></li><li><a href="/designMode/strategy.html" class="sidebar-link">策略模式</a></li><li><a href="/designMode/proxy.html" class="sidebar-link">代理模式</a></li><li><a href="/designMode/iterator.html" class="sidebar-link">迭代器模式</a></li><li><a href="/designMode/observer.html" class="active sidebar-link">发布订阅模式</a></li><li><a href="/designMode/command.html" class="sidebar-link">命令模式</a></li><li><a href="/designMode/composite.html" class="sidebar-link">组合模式</a></li><li><a href="/designMode/template.html" class="sidebar-link">模板方法模式</a></li><li><a href="/designMode/flyweight.html" class="sidebar-link">享元模式</a></li><li><a href="/designMode/chainOfResponsibility.html" class="sidebar-link">职责链模式</a></li><li><a href="/designMode/mediator.html" class="sidebar-link">中介者模式</a></li><li><a href="/designMode/decorator.html" class="sidebar-link">装饰器模式</a></li><li><a href="/designMode/state.html" class="sidebar-link">状态模式</a></li><li><a href="/designMode/adapter.html" class="sidebar-link">适配器模式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/browser/" class="sidebar-heading clickable"><span>浏览器</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/optimize/" class="sidebar-link">前端优化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="发布订阅模式"><a href="#发布订阅模式" class="header-anchor">#</a> 发布订阅模式</h1> <p><strong>发布订阅模式定义对象间的一种一对多的依赖关系，当一个对象的状态发生变化时，所有依赖于它的对象都将收到通知。
+在JavaScript中，我们一般用事件模型（注册回调函数的形式）来替代传统的发布订阅模式</strong></p> <p>DOM就是一个最常见的发布订阅</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 1. 多个订阅者</span>
+<span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'订阅者111'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'订阅者222'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> fn1<span class="token punctuation">)</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> fn2<span class="token punctuation">)</span>
+<span class="token comment">// console.log('订阅者111')</span>
+<span class="token comment">// console.log('订阅者222')</span>
+
+<span class="token comment">// 2. 订阅可取消</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> fn1<span class="token punctuation">)</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> fn2<span class="token punctuation">)</span>
+document<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> fn2<span class="token punctuation">)</span>
+<span class="token comment">// console.log('订阅者111')</span>
+</code></pre></div><p>再以公众号的消息机制来举例</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 公众号对象</span>
+<span class="token keyword">let</span> eventEmitter <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 缓存列表，存放 event 及 fn</span>
+eventEmitter<span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 订阅</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function-variable function">on</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token comment">// 如果对象中没有对应的 event 值，也就是说明没有订阅过，就给 event 创建个缓存列表</span>
+    <span class="token comment">// 如有对象中有相应的 event 值，把 fn 添加到对应 event 的缓存列表里</span>
+    <span class="token punctuation">(</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">(</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 发布</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function-variable function">emit</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token comment">// 第一个参数是对应的 event 值，直接用数组的 shift 方法取出</span>
+    <span class="token keyword">let</span> event <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        fns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// 如果缓存列表里没有 fn 就返回 false</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fns <span class="token operator">||</span> fns<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 遍历 event 值对应的缓存列表，依次执行 fn</span>
+    fns<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fn</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>_this<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">user1</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户1订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">user2</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户2订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 订阅</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article'</span><span class="token punctuation">,</span> user1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article'</span><span class="token punctuation">,</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 发布</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 发布-订阅模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>完善 once 和 off 方法</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> eventEmitter <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 缓存列表</span>
+    list<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 订阅</span>
+    <span class="token function">on</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果对象中没有对应的 event 值，也就是说明没有订阅过，就给 event 创建个缓存列表</span>
+        <span class="token comment">// 如有对象中有相应的 event 值，把 fn 添加到对应 event 的缓存列表里</span>
+        <span class="token punctuation">(</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">(</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 监听一次</span>
+    <span class="token function">once</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 先绑定，调用后删除</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">function</span> <span class="token function">on</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> on<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>_this<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        on<span class="token punctuation">.</span>fn <span class="token operator">=</span> fn<span class="token punctuation">;</span>
+        _this<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> on<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 取消订阅</span>
+    <span class="token function">off</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> fns <span class="token operator">=</span> _this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果缓存列表中没有相应的 fn，返回false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fns<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 如果没有传 fn 的话，就会将 event 值对应缓存列表中的 fn 都清空</span>
+            fns <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>fns<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 若有 fn，遍历缓存列表，看看传入的 fn 与哪个函数相同，如果相同就直接从缓存列表中删掉即可</span>
+            <span class="token keyword">let</span> cb<span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> cbLen <span class="token operator">=</span> fns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> cbLen<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                cb <span class="token operator">=</span> fns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>cb <span class="token operator">===</span> fn <span class="token operator">||</span> cb<span class="token punctuation">.</span>fn <span class="token operator">===</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    fns<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 发布</span>
+    <span class="token function">emit</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token comment">// 第一个参数是对应的 event 值，直接用数组的 shift 方法取出</span>
+        <span class="token keyword">let</span> event <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            fns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果缓存列表里没有 fn 就返回 false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fns <span class="token operator">||</span> fns<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 遍历 event 值对应的缓存列表，依次执行 fn</span>
+        fns<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fn</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>_this<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">user1</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户1订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">user2</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户2订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">user3</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户3订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">user4</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户4订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 订阅</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 取消user2方法的订阅</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+eventEmitter<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'article2'</span><span class="token punctuation">,</span> user4<span class="token punctuation">)</span>
+
+<span class="token comment">// 发布</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 发布-订阅模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 发布-订阅模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article2'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 观察者模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article2'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 观察者模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>总结</p> <ol><li>优点</li></ol> <ul><li>对象之间解耦</li> <li>异步编程中，可以更松耦合的代码编写</li></ul> <ol start="2"><li>缺点</li></ol> <ul><li>创建订阅者本身要消耗一定的时间和内存</li> <li>虽然可以弱化对象之间的联系，多个发布者和订阅者嵌套一起的时候，程序难以跟踪维护</li></ul> <p>本章节转载自 <a href="https://segmentfault.com/a/1190000019260857" target="_blank" rel="noopener noreferrer">https://segmentfault.com/a/1190000019260857<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/3/2020, 10:56:56 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/designMode/iterator.html" class="prev">
         迭代器模式
@@ -28,6 +186,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.dee2d364.js" defer></script><script src="/assets/js/2.b9fd0d4b.js" defer></script><script src="/assets/js/17.6406ab02.js" defer></script>
+    <script src="/assets/js/app.fb8c9b32.js" defer></script><script src="/assets/js/2.b9fd0d4b.js" defer></script><script src="/assets/js/17.3850c604.js" defer></script>
   </body>
 </html>
