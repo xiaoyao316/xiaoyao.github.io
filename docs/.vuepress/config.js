@@ -2,7 +2,9 @@ module.exports = {
     title: '前端大户',
     description: '前端大户个人博客',
     head: [
-        ['link', { rel: 'icon', href: '/img/favicon.ico' }]
+        ['link', { rel: 'icon', href: '/img/favicon.ico' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['link', { rel: 'apple-touch-icon', href: '/img/logo.png' }]
     ],
     themeConfig: {
         nav: [
@@ -59,6 +61,7 @@ module.exports = {
         sidebarDepth: 2,
         lastUpdated: 'Last Updated',
     },
+    serviceWorker: true,
     plugins: [
         '@vuepress/active-header-links',
         '@vuepress/back-to-top'
