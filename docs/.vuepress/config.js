@@ -64,6 +64,7 @@ module.exports = {
     serviceWorker: true,
     plugins: [
         '@vuepress/active-header-links',
-        '@vuepress/back-to-top'
+        '@vuepress/back-to-top',
+        '@vuepress/plugin-pwa'
     ]
 }
