@@ -14,14 +14,21 @@ module.exports = {
         sidebar: [
             {
                 title: 'JavaScript',// 必要的
-                path: '/js/',       // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: true,  // 可选的, 默认值是 true,
                 sidebarDepth: 1,    // 可选的, 默认值是 1
-                children: []
+                children: [
+                    '/js/promise',
+                    '/js/throttle',
+                    '/js/currying',
+                    '/js/call-apply-bind',
+                    '/js/new',
+                    '/js/instanceof',
+                    '/js/proto',
+                    '/js/eventloop'
+                ]
             },
             {
                 title: '设计模式',
-                path: '/designMode/',
                 collapsable: true,
                 sidebarDepth: 1,
                 children: [
@@ -42,8 +49,24 @@ module.exports = {
                 ]
             },
             {
+                title: '源码分析',
+                collapsable: true,
+                sidebarDepth: 1,
+                children: [
+                    {
+                        title: 'Element UI',
+                        path: '/sourceCode/element',
+                        collapsable: true,
+                        sidebarDepth: 1,
+                        children: [
+                            '/sourceCode/element/button',
+                            '/sourceCode/element/alert',
+                        ]
+                    }
+                ]
+            },
+            {
                 title: '浏览器',
-                path: '/browser/',
                 collapsable: true,
                 sidebarDepth: 1,
                 children: [
@@ -52,10 +75,11 @@ module.exports = {
             },
             {
                 title: '前端优化',
-                path: '/optimize/',
                 collapsable: true,
                 sidebarDepth: 1,
-                children: []
+                children: [
+                    '/optimize/webpack'
+                ]
             },
         ],
         sidebarDepth: 2,
