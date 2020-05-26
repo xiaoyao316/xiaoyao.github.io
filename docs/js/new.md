@@ -42,8 +42,9 @@ f1.getName()
 > 使用Object.create
 
 ```javascript
-function Fn (name) {
+function Fn (name, age) {
   this.name = name
+  this.age = age
 }
 Fn.prototype.getName = function () {
   console.log(this.name)
@@ -55,6 +56,6 @@ function _new (Fn, ...arg) {
     return obj;
 }
 
-var f1 = _new(Fn, '小王')
+var f1 = _new(Fn, '小王', 4)
 f1.getName()
 ```
