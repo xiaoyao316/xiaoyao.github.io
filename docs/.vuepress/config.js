@@ -13,8 +13,10 @@ module.exports = {
             { text: '设计模式', link: '/designMode/singleton' },
             { text: '源码学习',
                 items: [
-                    { text: 'Element UI', link: '/element/alert' },
-                    { text: 'Vue', link: '/vue/' }
+                    { text: 'Vue', link: '/vue/' },
+                    { text: 'Vuex', link: '/vuex/' },
+                    { text: 'Vue-Router', link: '/vue-router/' },
+                    { text: 'Element UI', link: '/element/alert' }
                 ]
             },
             { text: 'Github', link: 'https://github.com/xiaoyao316' }
@@ -47,8 +49,10 @@ module.exports = {
                 'adapter'
             ],
             '/element/': [
+                'communicate',
+                'form',
                 'alert',
-                'button'
+                'button',
             ],
             '/vue/': []
         },
@@ -123,7 +127,7 @@ module.exports = {
         //         ]
         //     },
         // ],
-        sidebarDepth: 3,
+        sidebarDepth: 4,
         lastUpdated: 'Last Updated',
     },
     serviceWorker: true,

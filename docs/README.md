@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/logo.png
 heroText: null
-actionText: 快速上手 →
+actionText: 进入博客 →
 actionLink: /js/promise
 features:
 - title: 技术
