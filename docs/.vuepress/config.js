@@ -25,10 +25,11 @@ module.exports = {
             '/js/': [
                 'promise',
                 'throttle',
-                'currying',
                 'call-apply-bind',
                 'new',
                 'instanceof',
+                'compose',
+                'currying',
                 'proto',
                 'eventloop',
             ],
@@ -56,77 +57,6 @@ module.exports = {
             ],
             '/vue/': []
         },
-        // sidebar1: [
-        //     {
-        //         title: 'JavaScript',// 必要的
-        //         collapsable: true,  // 可选的, 默认值是 true,
-        //         sidebarDepth: 1,    // 可选的, 默认值是 1
-        //         children: [
-        //             '/js/promise',
-        //             '/js/throttle',
-        //             '/js/currying',
-        //             '/js/call-apply-bind',
-        //             '/js/new',
-        //             '/js/instanceof',
-        //             '/js/proto',
-        //             '/js/eventloop'
-        //         ]
-        //     },
-        //     {
-        //         title: '设计模式',
-        //         collapsable: true,
-        //         sidebarDepth: 1,
-        //         children: [
-        //             '/designMode/singleton',
-        //             '/designMode/strategy',
-        //             '/designMode/proxy',
-        //             '/designMode/iterator',
-        //             '/designMode/observer',
-        //             '/designMode/command',
-        //             '/designMode/composite',
-        //             '/designMode/template',
-        //             '/designMode/flyweight',
-        //             '/designMode/chainOfResponsibility',
-        //             '/designMode/mediator',
-        //             '/designMode/decorator',
-        //             '/designMode/state',
-        //             '/designMode/adapter'
-        //         ]
-        //     },
-        //     {
-        //         title: 'Element源码',
-        //         collapsable: true,
-        //         sidebarDepth: 1,
-        //         children: [
-        //             {
-        //                 title: '工具函数',
-        //                 path: '/sourceCode/element',
-        //                 collapsable: true,
-        //                 sidebarDepth: 1,
-        //                 children: [
-        //                     '/sourceCode/element/button',
-        //                     '/sourceCode/element/alert',
-        //                 ]
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         title: '浏览器',
-        //         collapsable: true,
-        //         sidebarDepth: 1,
-        //         children: [
-        //             '/browser/loadpage'
-        //         ]
-        //     },
-        //     {
-        //         title: '前端优化',
-        //         collapsable: true,
-        //         sidebarDepth: 1,
-        //         children: [
-        //             '/optimize/webpack'
-        //         ]
-        //     },
-        // ],
         sidebarDepth: 4,
         lastUpdated: 'Last Updated',
     },
