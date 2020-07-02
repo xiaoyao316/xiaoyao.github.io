@@ -16,7 +16,7 @@ module.exports = {
                     { text: 'Vue', link: '/vue/' },
                     { text: 'Vuex', link: '/vuex/' },
                     { text: 'Vue-Router', link: '/vue-router/' },
-                    { text: 'Element UI', link: '/element/alert' }
+                    { text: 'Element UI', link: '/element/communicate' }
                 ]
             },
             { text: 'Github', link: 'https://github.com/xiaoyao316' }
