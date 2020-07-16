@@ -14,7 +14,7 @@ module.exports = {
             { text: '源码学习',
                 items: [
                     { text: 'Vue', link: '/vue/' },
-                    { text: 'Vuex', link: '/vuex/' },
+                    { text: 'Vuex', link: '/vuex/basic' },
                     { text: 'Vue-Router', link: '/vue-router/' },
                     { text: 'Element UI', link: '/element/communicate' }
                 ]
@@ -55,7 +55,11 @@ module.exports = {
                 'alert',
                 'button',
             ],
-            '/vue/': []
+            '/vuex/': [
+                'basic',
+                'core',
+                'module'
+            ]
         },
         sidebarDepth: 4,
         lastUpdated: 'Last Updated',
